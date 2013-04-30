@@ -9,3 +9,7 @@
 dan     = User.create(username: 'dan')
 rich    = User.create(username: 'rich')
 tristan = User.create(username: 'tristan')
+
+dan.followers << [rich, tristan]
+rich.followers << [dan, tristan]
+tristan.followers << [dan, rich]
