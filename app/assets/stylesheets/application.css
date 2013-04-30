@@ -11,3 +11,33 @@
  *= require_self
  *= require_tree .
  */
+body{
+  margin: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  color: #333;
+}
+p{
+  font-size: 16px;
+  line-height: 26px;
+  color: #555;
+}
+article p{
+  margin-bottom: 0;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 22.5px;
+}
+footer{
+  color: #777;
+  font-size: 13px;
+}
+address, time{
+  display: inline;
+}
+.container{
+  width: 940px;
+  padding: 20px;
+  margin: 0 auto;
+}
