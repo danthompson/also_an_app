@@ -1,3 +1,8 @@
 <h1>Welcome, <%= current_user.username %></h1>
 <p>You're following: <%= current_user.followed_usernames %></p>
 <hr>
+<ul>
+  <% current_user.followed_posts.each do |post| %>
+    <li><%= post.body %> &mdash; <%= post.user.username %></li>
+  <% end %>
+</ul>

@@ -22,4 +22,14 @@ feature 'User browses the homepage' do
 
     expect(page).to have_text("following: #{bob.username}")
   end
+
+  scenario 'lists posts of the users being followed' do
+    alice = FactoryGirl.create(:user)
+    alice_post = FactoryGirl.create(:post, user: alice)
+    subject.followed_users << alice
+
+    visit root_url
+
+    expect(page).to have_text(alice_post.body)
+  end
 end
